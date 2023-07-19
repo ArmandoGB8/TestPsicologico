@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <title>Test</title>
+    <style>
+        td{
+            border-left: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function showSubmit(){
+            var radio;
+            var total=false;
+            var total_aux = false;
+
+            for (var i = 1; i <16;i++){
+                radio= document.getElementsByName('p'+i);
+                if(radio.item(0).checked || radio.item(1).checked || radio.item(2).checked)
+                    total = true;
+                else total = false;
+                //console.log(total);
+            }
+            if(total)
+                document.getElementById("submit").style.display="block";
+            
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Test de asertividad</h1>
+    </header>
+    <div id="container">
+    <div class="sides"></div>
+
+    <div id="form">
+        <form method="post" action="asert.php">
+                <div class="pregunta">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Pregunta</th>
+                                <th>Sí</th>
+                                <th>Algunas veces</th>
+                                <th>No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td class="pregunta">1-Me siento comodo si tengo que hablar en publico</td>
+                                <td><input type="radio" name="p1" id="p1A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p1" id="p1B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p1" id="p1C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr> 
+                                <td>2-Puedo expresar mis pensamientos a otras personas cuando estoy enojado</td>
+                                <td><input type="radio" name="p2" id="p2A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p2" id="p2B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p2" id="p2C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr> 
+                                <td>3-Si siento que estoy en lo cierto, lo digo, aunque no les guste a los demás</td>
+                                <td><input type="radio" name="p3" id="p3A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p3" id="p3B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p3" id="p3C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>4-Si alguien cercano a mí (amigo, familiar, etc) hace algo que no me gusta, se lo manifiesto</td>
+                                <td><input type="radio" name="p4" id="p4A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p4" id="p4B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p4" id="p4C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>5-Me resulta fácil iniciar una comunicación con un extraño.</td>
+                                <td><input type="radio" name="p5" id="p5A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p5" id="p5B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p5" id="p5C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>6-Si me invitan a una reunión a la cual no tengo ganas de ir, la rechazo con facilidad</td>
+                                <td><input type="radio" name="p6" id="p6A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p6" id="p6B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p6" id="p6C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>7-Si la atención o la comida no me resultan buenas, se lo manifiesto al mozo</td>
+                                <td><input type="radio" name="p7" id="p7A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p7" id="p7B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p7" id="p7C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>8-Me resulta fácil solicitar ayuda a alguien que no forma parte de mi círculo más cercano</td>
+                                <td><input type="radio" name="p8" id="p8A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p8" id="p8B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p8" id="p8C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>9-Puedo cambiar abiertamente de opinión sobre algo de lo que antes había afirmado públicamente que no era así</td>
+                                <td><input type="radio" name="p9" id="p9A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p9" id="p9B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p9" id="p9C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>10-Reconozco con facilidad y en forma pública cuando he cometido un error</td>
+                                <td><input type="radio" name="p10" id="p10A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p10" id="p10B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p10" id="p10C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>11-Cuando alguien realiza una tarea o trabajo que apruebo o admiro, se lo expreso con facilidad</td>
+                                <td><input type="radio" name="p11" id="p11A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p11" id="p11B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p11" id="p11C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>12-Si alguien se adelanta a mi turno en una cola de espera, me quejo</td>
+                                <td><input type="radio" name="p12" id="p12A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p12" id="p12B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p12" id="p12C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>13-Si observo que alguien que se encuentra por encima de mi nivel en el ámbito laboral está cometiendo un error, se lo hago notar.</td>
+                                <td><input type="radio" name="p13" id="p13A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p13" id="p13B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p13" id="p13C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>14-Si alguien con su vehículo está obstruyendo la salida de mi garaje, aunque no lo vaya yo a usar inmediatamente, me quejo</td>
+                                <td><input type="radio" name="p14" id="p14A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p14" id="p14B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p14" id="p14C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                            <tr>
+                                <td>15-Si conozco que tengo una debilidad en mi carácter, o forma de ser, o un defecto físico, puedo hacerlo público con facilidad</td>
+                                <td><input type="radio" name="p15" id="p15A" value="A" onclick="showSubmit()"></td>
+                                <td class="av"><input type="radio" name="p15" id="p15B" value="B" onclick="showSubmit()"></td>
+                                <td><input type="radio" name="p15" id="p15C" value="C" onclick="showSubmit()"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <center><input type="submit" id="submit" value="Ver resultado"></center>
+            </form>
+        </div>
+        <div class="sides"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+<!--     <link rel="stylesheet" href="test_style.css"> -->
+    <!-- <script src="test_js.js"></script> -->
+    <title>Test</title>
+    <style>
+        td{
+            border-left: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function showSubmit(){
+            var radio;
+            var total=false;
+            var total_aux = false;
+
+            for (var i = 1; i <16;i++){
+                radio= document.getElementsByName('p'+i);
+                if(radio.item(0).checked || radio.item(1).checked || radio.item(2).checked)
+                    total = true;
+                else total = false;
+                //console.log(total);
+            }
+            if(total)
+                document.getElementById("submit").style.display="block";
+            
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Test de motivacion personal</h1>
+    </header>
+    <div id="container">
+    <div class="sides"></div>
+
+    <div id="form">
+        <form method="post" action="mot.php">
+                <div class="pregunta">
+                    <table border="1">
+                        <tr>
+                            <td>
+                                Me siento mejor con los demás cuando…
+                            </td>
+                            <td>
+                                A-Los dirijo <input type="radio" name="p1" value="a">
+                            </td>
+                            <td>
+                                B-Me aceptan <input type="radio" name="p1" value="b">
+                            </td>
+                            <td>
+                                C-Aprendo algo de ellos <input type="radio" name="p1" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Obtengo la mejor parte para mí siendo...
+                            </td>
+                            <td>
+                                A-Oportunista <input type="radio" name="p2" value="a">
+                            </td>
+                            <td>
+                                B-Amistoso <input type="radio" name="p2" value="b">
+                            </td>
+                            <td>
+                                C-Congruente conmigo <input type="radio" name="p2" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Me siento bien conmigo mismo cuándo...
+                            </td>
+                            <td>
+                                A-Busco ser lider <input type="radio" name="p3" value="a">
+                            </td>
+                            <td>
+                                B-Me adapto al grupo <input type="radio" name="p3" value="b">
+                            </td>
+                            <td>
+                                C-Actuo por ideal <input type="radio" name="p3" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Yo me esfuerzo más cuando...
+                            </td>
+                            <td>
+                                A- Hay dinero de por medio<input type="radio" name="p4" value="a">
+                            </td>
+                            <td>
+                                B- Reconocen mi esfuerzo<input type="radio" name="p4" value="b">
+                            </td>
+                            <td>
+                                C- Me gusta lo que hay que hacer<input type="radio" name="p4" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Al relacionarme con otros pienso en...
+                            </td>
+                            <td>
+                                A- La influencia que tienen<input type="radio" name="p5" value="a">
+                            </td>
+                            <td>
+                                B- En la confianza que me tienen<input type="radio" name="p5" value="b">
+                            </td>
+                            <td>
+                                C- En lo que significa para mi desarrollo<input type="radio" name="p5" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Me da mas miedo...
+                            </td>
+                            <td>
+                                A- la pobreza<input type="radio" name="p6" value="a">
+                            </td>
+                            <td>
+                                B- La soledad<input type="radio" name="p6" value="b">
+                            </td>
+                            <td>
+                                C- La falta de sentida de la vida<input type="radio" name="p6" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Impresiono a otros presentandome como una persona...
+                            </td>
+                            <td>
+                                A- Astuta y audaz<input type="radio" name="p7" value="a">
+                            </td>
+                            <td>
+                                B- Cariñosa y comprometida<input type="radio" name="p7" value="b">
+                            </td>
+                            <td>
+                                C- Culta e inteligente<input type="radio" name="p7" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Frente al fracaso yo...
+                            </td>
+                            <td>
+                                A- Me siento lesionado en mis derechs<input type="radio" name="p8" value="a">
+                            </td>
+                            <td>
+                                B- Busco consuelo en loos demas<input type="radio" name="p8" value="b">
+                            </td>
+                            <td>
+                                C- Busco una explicacion que me ayude a mejorar<input type="radio" name="p8" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lo que mas disfruto es(son)...
+                            </td>
+                            <td>
+                                A- Los exitos economicos<input type="radio" name="p9" value="a">
+                            </td>
+                            <td>
+                                B- La compañia de mi familia<input type="radio" name="p9" value="b">
+                            </td>
+                            <td>
+                                C- Los logros profesionales<input type="radio" name="p9" value="c">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Para vencer las dificultades yo...
+                            </td>
+                            <td>
+                                A- Uso toda mi fuerza<input type="radio" name="p10" value="a">
+                            </td>
+                            <td>
+                                B- Necesito ayuda de los demas<input type="radio" name="p10" value="b">
+                            </td>
+                            <td>
+                                C- Apelo a mi frmacion interior<input type="radio" name="p10" value="c">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <center><input type="submit" id="submit" value="Ver resultado"></center>
+            </form>
+        </div>
+        <div class="sides"></div>
+    </div>
+</body>
+</html>

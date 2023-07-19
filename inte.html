@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--     <link rel="stylesheet" href="test_style.css"> -->
+    <!-- <script src="test_js.js"></script> -->
+    <title>Test</title>
+    <style>
+        td{
+            border-left: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function showSubmit(){
+            var radio;
+            var total=false;
+            var total_aux = false;
+
+            for (var i = 1; i <16;i++){
+                radio= document.getElementsByName('p'+i);
+                if(radio.item(0).checked || radio.item(1).checked || radio.item(2).checked)
+                    total = true;
+                else total = false;
+                //console.log(total);
+            }
+            if(total)
+                document.getElementById("submit").style.display="block";
+            
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Test de inteligencia emocional</h1>
+    </header>
+    <div id="container">
+    <div class="sides"></div>
+    <div id="form">
+        <form method="post" action="inte.php">
+                <div class="pregunta">
+                    <label>Nombre:</label>
+                    <input type="text" name="Rnom"><br><br>
+                    <label>Genero:</label>
+                    <select name="sex">
+                    <option value="masculino" selected>Masculino</option>
+                    <option value="femenino" >Femenino</option>
+                    </select><br><br>
+                    <label>Correo:</label>
+                    <input type="text" name="Rcor"><br><br>
+                    <table border="1">
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1.	Presto mucha atención a los sentimientos.</td>
+                            <td>
+                                <input type="radio" name="p1" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p1" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p1" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p1" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p1" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.	Normalmente me preocupo por lo que siento.</td>
+                            <td>
+                                <input type="radio" name="p2" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p2" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p2" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p2" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p2" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.	Normalmente dedico tiempo a pensar en mis emociones.</td>
+                            <td>
+                                <input type="radio" name="p3" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p3" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p3" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p3" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p3" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.	Pienso que merece la pena prestar atención a mis emociones.</td>
+                            <td>
+                                <input type="radio" name="p4" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p4" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p4" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p4" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p4" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5.	Dejo que mis sentimientos afecten a mis pensamientos.</td>
+                            <td>
+                                <input type="radio" name="p5" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p5" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p5" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p5" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p5" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6.	Pienso en mi estado de ánimo constantemente.</td>
+                            <td>
+                                <input type="radio" name="p6" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p6" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p6" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p6" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p6" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7.	A menudo pienso en mis sentimientos.</td>
+                            <td>
+                                <input type="radio" name="p7" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p7" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p7" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p7" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p7" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8.	Presto mucha atención a cómo me siento.</td>
+                            <td>
+                                <input type="radio" name="p8" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p8" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p8" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p8" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p8" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9.	Tengo claros mis sentimientos.</td>
+                            <td>
+                                <input type="radio" name="p9" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p9" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p9" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p9" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p9" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10.	Frecuentemente puedo definir mis sentimientos.</td>
+                            <td>
+                                <input type="radio" name="p10" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p10" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p10" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p10" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p10" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11.	Casi siempre sé cómo me siento.</td>
+                            <td>
+                                <input type="radio" name="p11" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p11" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p11" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p11" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p11" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.	Normalmente conozco mis sentimientos sobre las personas.</td>
+                            <td>
+                                <input type="radio" name="p12" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p12" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p12" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p12" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p12" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13.	A menudo me doy cuenta de mis sentimientos en diferentes situaciones.</td>
+                            <td>
+                                <input type="radio" name="p13" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p13" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p13" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p13" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p13" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14.	Siempre puedo decir cómo me siento.</td>
+                            <td>
+                                <input type="radio" name="p14" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p14" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p14" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p14" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p14" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15.	A veces puedo decir cuáles son mis emociones.</td>
+                            <td>
+                                <input type="radio" name="p15" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p15" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p15" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p15" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p15" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16.	Puedo llegar a comprender mis sentimientos.</td>
+                            <td>
+                                <input type="radio" name="p16" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p16" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p16" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p16" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p16" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17.	Aunque a veces me siento triste, suelo tener una visión positiva.</td>
+                            <td>
+                                <input type="radio" name="p17" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p17" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p17" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p17" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p17" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18.	Aunque me sienta mal, procuro pensar en cosas agradables.</td>
+                            <td>
+                                <input type="radio" name="p18" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p18" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p18" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p18" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p18" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19.	Cuando estoy triste, pienso en todos los placeres de la vida.</td>
+                            <td>
+                                <input type="radio" name="p19" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p19" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p19" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p19" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p19" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20.	Intento tener pensamientos positivos aunque me sienta mal.</td>
+                            <td>
+                                <input type="radio" name="p20" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p20" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p20" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p20" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p20" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.	Si doy demasiadas vueltas a las cosas, complicándolas, trato de calmarme.</td>
+                            <td>
+                                <input type="radio" name="p21" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p21" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p21" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p21" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p21" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.	Me preocupo por tener un buen estado de ánimo.</td>
+                            <td>
+                                <input type="radio" name="p22" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p22" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p22" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p22" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p22" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23.	Tengo mucha energía cuando me siento feliz.</td>
+                            <td>
+                                <input type="radio" name="p23" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p23" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p23" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p23" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p23" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24.	Cuando estoy enfadado intento cambiar mi estado de ánimo.</td>
+                            <td>
+                                <input type="radio" name="p24" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p24" value="2">
+                            </td>
+                            <td>
+                                <input type="radio" name="p24" value="3">
+                            </td>
+                            <td>
+                                <input type="radio" name="p24" value="4">
+                            </td>
+                            <td>
+                                <input type="radio" name="p24" value="5">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <center><input type="submit" id="submit" value="Ver resultado"></center>
+            </form>
+        </div>
+        <div class="sides"></div>
+    </div>
+</body>
+</html>

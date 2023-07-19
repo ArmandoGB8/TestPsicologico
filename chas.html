@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+<!--     <link rel="stylesheet" href="test_style.css"> -->
+    <!-- <script src="test_js.js"></script> -->
+    <title>Test</title>
+    <style>
+        td{
+            border-left: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function showSubmit(){
+            var radio;
+            var total=false;
+            var total_aux = false;
+
+            for (var i = 1; i <16;i++){
+                radio= document.getElementsByName('p'+i);
+                if(radio.item(0).checked || radio.item(1).checked || radio.item(2).checked)
+                    total = true;
+                else total = false;
+                //console.log(total);
+            }
+            if(total)
+                document.getElementById("submit").style.display="block";
+            
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Test de chaisde</h1>
+    </header>
+    <div id="container">
+    <div class="sides"></div>
+    <div id="form">
+        <form method="post" action="chas.php">
+                <div class="pregunta">
+                    <table border="1">
+                        <tr>
+                            <td></td>
+                            <td>Si</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>¿Aceptarías trabajar escribiendo artículos en la sección de economía de un diario?</td>
+                            <td>
+                                <input type="radio" name="p1" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p1" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te ofrecerías para organizar la despedida de soltero/s de uno de tus amigos?</td>
+                            <td>
+                                <input type="radio" name="p2" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p2" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría dirigir un proyecto de urbanización en tu lugar de residencia?</td>
+                            <td>
+                                <input type="radio" name="p3" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p3" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿A una frustración siempre opones un pensamiento positivo? </td>
+                            <td>
+                                <input type="radio" name="p4" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p4" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te dedicarías a socorrer a personas accidentadas o atacadas por asaltantes?</td>
+                            <td>
+                                <input type="radio" name="p5" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p5" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cuándo eras chico ¿te interesaba saber como estaban construidos tus juguetes?</td>
+                            <td>
+                                <input type="radio" name="p6" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p6" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te interesan más los misterios de la naturaleza que los secretos de la tecnología? </td>
+                            <td>
+                                <input type="radio" name="p7" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p7" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Escuchas atentamente los problemas que te plantean tus amigos?</td>
+                            <td>
+                                <input type="radio" name="p8" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p8" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te ofrecerías para explicarle a tus compañeros un tema que ellos no entendieron?</td>
+                            <td>
+                                <input type="radio" name="p9" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p9" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Eres exigente y crítico con tu equipo de trabajo?</td>
+                            <td>
+                                <input type="radio" name="p10" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p10" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te atrae armar rompecabezas? </td>
+                            <td>
+                                <input type="radio" name="p11" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p11" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Sabes la diferencia conceptual entre macroeconomía y microeconomía?</td>
+                            <td>
+                                <input type="radio" name="p12" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p12" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Usar uniforme, ¿Te hace sentir distinto, importante?</td>
+                            <td>
+                                <input type="radio" name="p13" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p13" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Participarías como profesional en un espectáculo de acrobacia aérea?</td>
+                            <td>
+                                <input type="radio" name="p14" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p14" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Organizas tu dinero de modo que te alcance para lo que debes hacer con él?</td>
+                            <td>
+                                <input type="radio" name="p15" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p15" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Convences fácilmente a otras personas sobre la validez de tus argumentos? </td>
+                            <td>
+                                <input type="radio" name="p16" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p16" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Estás informado sobre los últimos descubrimientos científicos?</td>
+                            <td>
+                                <input type="radio" name="p17" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p17" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ante una situación de emergencia, ¿Actúas rápidamente?</td>
+                            <td>
+                                <input type="radio" name="p18" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p18" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cuando tienes que resolver un problema matemático ¿Perseveras hasta encontrar la solución?</td>
+                            <td>
+                                <input type="radio" name="p19" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p19" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Si te convocara tu club preferido para planificar, organizar y dirigir un campo deportivo ¿Aceptarías?</td>
+                            <td>
+                                <input type="radio" name="p20" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p20" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Eres el que pone un toque de alegría en las fiestas?</td>
+                            <td>
+                                <input type="radio" name="p21" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p21" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Crees que los detalles son tan importantes como el todo?</td>
+                            <td>
+                                <input type="radio" name="p22" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p22" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te sentirías a gusto trabajando en un ámbito hospitalario?</td>
+                            <td>
+                                <input type="radio" name="p23" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p23" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría participar para mantener el orden en grandes desordenes o catástrofes?</td>
+                            <td>
+                                <input type="radio" name="p24" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p24" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Pasarías varias horas leyendo un libro de tu interés?</td>
+                            <td>
+                                <input type="radio" name="p25" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p25" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Planificas detalladamente tus trabajos antes de empezar?</td>
+                            <td>
+                                <input type="radio" name="p26" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p26" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Entablas una relación casi personal con tu computadora? </td>
+                            <td>
+                                <input type="radio" name="p27" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p27" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Disfrutarías modelar arcilla?</td>
+                            <td>
+                                <input type="radio" name="p28" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p28" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Ayudas a no videntes habitualmente a cruzar la calle?</td>
+                            <td>
+                                <input type="radio" name="p29" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p29" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Consideras importante que desde la escuela primaria se fomente la actitud crítica y la participación activa?</td>
+                            <td>
+                                <input type="radio" name="p30" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p30" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te parece bien que las mujeres formen parte de las fuerzas armadas bajo las mismas condiciones que los hombres?</td>
+                            <td>
+                                <input type="radio" name="p31" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p31" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría crear nuevas técnicas para descubrir las enfermedades a través del microscopio?</td>
+                            <td>
+                                <input type="radio" name="p32" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p32" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Participarías en una campaña de prevención de la enfermedad del Dengue? </td>
+                            <td>
+                                <input type="radio" name="p33" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p33" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te interesan los temas relacionados al pasado y el progreso de la humanidad?</td>
+                            <td>
+                                <input type="radio" name="p34" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p34" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te incluirías en un proyecto de investigación de los movimientos sísmicos y sus consecuencias?</td>
+                            <td>
+                                <input type="radio" name="p35" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p35" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fuera de los horarios escolares ¿dedicas algún tiempo a actividades corporales?</td>
+                            <td>
+                                <input type="radio" name="p36" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p36" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te interesan las actividades de mucha acción y de reacción rápida en situaciones imprevistas de peligro?</td>
+                            <td>
+                                <input type="radio" name="p37" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p37" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te ofrecerías para colaborar como voluntarios en los laboratorios especiales de la NASA?</td>
+                            <td>
+                                <input type="radio" name="p38" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p38" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gusta más el trabajo manual que el trabajo intelectual?</td>
+                            <td>
+                                <input type="radio" name="p39" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p39" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Estarías dispuesto a renunciar a un momento placentero por ofrecer tu servicio como profesional?</td>
+                            <td>
+                                <input type="radio" name="p40" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p40" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Participarías en una investigación sobre la violencia en el fútbol?</td>
+                            <td>
+                                <input type="radio" name="p41" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p41" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría trabajar en un laboratorio mientras estudias? </td>
+                            <td>
+                                <input type="radio" name="p42" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p42" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Arriesgarías tu vida para salvar la vida de otra persona que no conoces? </td>
+                            <td>
+                                <input type="radio" name="p43" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p43" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría tomar un curso de primeros auxilios?</td>
+                            <td>
+                                <input type="radio" name="p44" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p44" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Tolerarías empezar tantas veces como fuere necesario hasta obtener el logro deseado?</td>
+                            <td>
+                                <input type="radio" name="p45" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p45" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Distribuyes tu horario adecuadamente para poder hacer todo lo planeado?</td>
+                            <td>
+                                <input type="radio" name="p46" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p46" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Tomarías un curso para aprender a fabricar los instrumentos y/o piezas de las máquinas o aparatos que utilizas?</td>
+                            <td>
+                                <input type="radio" name="p47" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p47" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Elegirías una profesión en la que tuvieras que estar algunos meses alejados de tu familia, por ejemplo marino?</td>
+                            <td>
+                                <input type="radio" name="p48" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p48" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Radicarías en una zona agrícola-ganadera para desarrollar tus actividades como profesional?</td>
+                            <td>
+                                <input type="radio" name="p49" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p49" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cuando estas en un grupo de trabajo, ¿Te agrada producir ideas originales y que sean tenidas en cuenta?</td>
+                            <td>
+                                <input type="radio" name="p50" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p50" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te resulta fácil coordinar un grupo de trabajo? </td>
+                            <td>
+                                <input type="radio" name="p51" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p51" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te resultaría interesante el estudio de las ciencias biológicas?</td>
+                            <td>
+                                <input type="radio" name="p52" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p52" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Si una empresa solicita un profesional como gerente de comercialización, ¿Te sentirías a gusto desempeñando ese rol?</td>
+                            <td>
+                                <input type="radio" name="p53" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p53" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te incluirías en un proyecto nacional de desarrollo de la principal fuente de recursos de tu lugar de residencia?</td>
+                            <td>
+                                <input type="radio" name="p54" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p54" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Tienes interés por saber cuáles son las causas que determinan ciertos fenómenos, aunque saberlo no incida en tu vida?</td>
+                            <td>
+                                <input type="radio" name="p55" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p55" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Investigarías a algún filósofo o escritor que haya expresado tus mismas ideas con antelación?</td>
+                            <td>
+                                <input type="radio" name="p56" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p56" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Desearías que te regalen algún instrumento musical para tu cumpleaños?</td>
+                            <td>
+                                <input type="radio" name="p57" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p57" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Aceptarías colaborar con el cumplimiento de las normas en lugares públicos?</td>
+                            <td>
+                                <input type="radio" name="p58" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p58" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Crees que tus ideas son importantes, y haces todo lo posible para ponerlas en práctica?</td>
+                            <td>
+                                <input type="radio" name="p59" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p59" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cuando se descompone un artefacto en tu casa ¿lo reparas rápidamente?</td>
+                            <td>
+                                <input type="radio" name="p60" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p60" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Formarías parte de un equipo de trabajo orientado a la preservación de la flora y la fauna en extinción?</td>
+                            <td>
+                                <input type="radio" name="p61" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p61" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Acostumbras a leer revistas relacionadas con los últimos avances científicos y tecnológicos en el área de salud?</td>
+                            <td>
+                                <input type="radio" name="p62" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p62" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Preservar las raíces culturales de nuestro país te parece importante y necesario?</td>
+                            <td>
+                                <input type="radio" name="p63" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p63" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría realizar una investigación que contribuyera a hacer más justa la distribución de la riqueza?</td>
+                            <td>
+                                <input type="radio" name="p64" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p64" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría realizar tareas auxiliares en una nave, como izado y arriado de velas, pintura y conservación de cascos, arreglo de desperfectos, de motores, etc.?</td>
+                            <td>
+                                <input type="radio" name="p65" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p65" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Crees que el país debe poseer la más alta tecnología armamentista, a cualquier precio?</td>
+                            <td>
+                                <input type="radio" name="p66" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p66" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>La libertad y la justicia ¿Son valores importantes en tu vida?</td>
+                            <td>
+                                <input type="radio" name="p67" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p67" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Aceptarías hacer una práctica cobrando, en la industria de productos alimenticios o en el sector de control de calidad?</td>
+                            <td>
+                                <input type="radio" name="p68" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p68" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Consideras que la salud pública debe ser prioritaria, gratuita y eficiente para todos?</td>
+                            <td>
+                                <input type="radio" name="p69" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p69" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría investigar sobre una nueva vacuna? </td>
+                            <td>
+                                <input type="radio" name="p70" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p70" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>En un equipo de trabajo ¿Prefieres el rol de coordinador?</td>
+                            <td>
+                                <input type="radio" name="p71" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p71" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>En una discusión entre amigos ¿Te ofreces como mediador?</td>
+                            <td>
+                                <input type="radio" name="p72" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p72" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Estás de acuerdo con la formación de un cuerpo de soldados profesionales?</td>
+                            <td>
+                                <input type="radio" name="p73" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p73" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Lucharías por una causa justa hasta las últimas consecuencias?</td>
+                            <td>
+                                <input type="radio" name="p74" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p74" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría investigar científicamente sobre cultivos agrícolas?</td>
+                            <td>
+                                <input type="radio" name="p75" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p75" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Harías un nuevo diseño de una prenda pasada de moda, ante una reunión imprevista?</td>
+                            <td>
+                                <input type="radio" name="p76" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p76" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Visitarías un observatorio astronómico para conocer en acción el funcionamiento de los aparatos?</td>
+                            <td>
+                                <input type="radio" name="p77" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p77" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Dirigirías el área de importación y exportación de una empresa?</td>
+                            <td>
+                                <input type="radio" name="p78" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p78" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te inhibes al entrar a un lugar nuevo con gente desconocida?</td>
+                            <td>
+                                <input type="radio" name="p79" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p79" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gratificaría trabajar con niños?</td>
+                            <td>
+                                <input type="radio" name="p80" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p80" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Harías el cartel para una campaña contra el SIDA?</td>
+                            <td>
+                                <input type="radio" name="p81" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p81" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Dirigirías un grupo de teatro independiente?</td>
+                            <td>
+                                <input type="radio" name="p82" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p82" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Enviarías tu currículum a una empresa automotriz que solicita gente para su área de producción?</td>
+                            <td>
+                                <input type="radio" name="p83" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p83" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Participarías en un grupo de defensa internacional dentro de alguna fuerza armada?</td>
+                            <td>
+                                <input type="radio" name="p84" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p84" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te costearías tus estudios trabajando en una auditoría?</td>
+                            <td>
+                                <input type="radio" name="p85" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p85" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Eres de los que defienden causas perdidas?</td>
+                            <td>
+                                <input type="radio" name="p86" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p86" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ante una emergencia epidémica ¿Participarías en una campaña brindando tu ayuda?</td>
+                            <td>
+                                <input type="radio" name="p87" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p87" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Sabes responder que significa ADN y ARN?</td>
+                            <td>
+                                <input type="radio" name="p88" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p88" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Elegirías una carrera cuyo instrumento de trabajo fuere la utilización de un idioma extranjero?</td>
+                            <td>
+                                <input type="radio" name="p89" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p89" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Trabajar con objetos te resulta más gratificante que trabajar con personas?</td>
+                            <td>
+                                <input type="radio" name="p90" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p90" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te resultaría gratificante ser asesor contable en una empresa reconocida?</td>
+                            <td>
+                                <input type="radio" name="p91" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p91" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ante un llamado solidario ¿Te ofrecerías para cuidar un enfermo?</td>
+                            <td>
+                                <input type="radio" name="p92" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p92" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te atrae investigar sobre los misterios del universo, por ejemplo, agujeros negros?</td>
+                            <td>
+                                <input type="radio" name="p93" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p93" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>El trabajo individual ¿Te resulta más rápido y efectivo que el trabajo grupal?</td>
+                            <td>
+                                <input type="radio" name="p94" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p94" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Dedicarías parte de tu tiempo para ayudar a personas de zonas de desastre?</td>
+                            <td>
+                                <input type="radio" name="p95" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p95" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cuando eliges tu ropa o decoras un ambiente ¿Tienes en cuenta la combinación de los colores, las telas o el estilo de los muebles?</td>
+                            <td>
+                                <input type="radio" name="p96" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p96" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Te gustaría trabajar como profesional dirigiendo la construcción de una empresa hidroeléctrica?</td>
+                            <td>
+                                <input type="radio" name="p97" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p97" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>¿Sabes lo que es el PBI?</td>
+                            <td>
+                                <input type="radio" name="p98" value="1">
+                            </td>
+                            <td>
+                                <input type="radio" name="p98" value="0">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <center><input type="submit" id="submit" value="Ver resultado"></center>
+            </form>
+        </div>
+        <div class="sides"></div>
+    </div>
+</body>
+</html>
